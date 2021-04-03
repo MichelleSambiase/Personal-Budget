@@ -1,0 +1,83 @@
+{
+  "ingresos": [
+    {
+      "concepto": "sueldo",
+      "monto": 455555,
+      "fecha": "12/01/19",
+      "tipo": "ingresos",
+      "id": 1
+    },
+    {
+      "concepto": "horas extras",
+      "monto": 4000,
+      "fecha": "12/02/19",
+      "tipo": "ingresos",
+      "id": 2
+    },
+    {
+      "concepto": "sueldo",
+      "monto": 100000,
+      "fecha": "02/05/19",
+      "tipo": "ingresos",
+      "id": 3
+    },
+    {
+      "concepto": "Proyecto independiente",
+      "monto": 15000,
+      "fecha": "28/06/19",
+      "tipo": "ingresos",
+      "id": 4
+    }
+  ],
+  "egresos": [
+    {
+      "concepto": "farmacia",
+      "monto": 1500,
+      "fecha": "02/03/19",
+      "tipo": "egresos",
+      "id": 1
+    },
+    {
+      "concepto": "supermercado DIA",
+      "monto": 3000,
+      "fecha": "01/02/19",
+      "tipo": "egresos",
+      "id": 2
+    },
+    {
+      "concepto": "Pelueria",
+      "monto": 5000,
+      "fecha": "13/03/19",
+      "tipo": "egresos",
+      "id": 3
+    },
+    {
+      "concepto": "Impuestos",
+      "monto": 10000,
+      "fecha": "05/04/19",
+      "tipo": "egresos",
+      "id": 4
+    },
+    {
+      "concepto": "Comida de mascota",
+      "monto": 5000,
+      "fecha": "29/05/19",
+      "tipo": "egresos",
+      "id": 5
+    },
+    {
+      "concepto": "Coto digital",
+      "monto": 9000,
+      "fecha": "19/06/19",
+      "tipo": "egresos",
+      "id": 6
+    },
+    {
+      "concepto": "Kiosko",
+      "monto": 455,
+      "fecha": "25/05/19",
+      "tipo": "egresos",
+      "id": 7
+    }
+  ]
+}
