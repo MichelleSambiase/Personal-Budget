@@ -42,6 +42,25 @@ const RecordList = (props) => {
       flexDirection: "row",
       justifyContent: "center",
     },
+    styleContentText: {
+      display: "flex",
+    },
+    styleDialogTitle: {
+      display: "flex",
+      justifyContent: "center",
+    },
+    buttonActionsStyle: {
+      color: "#fbc9c9e8",
+    },
+    titleCell: {
+      color: "#fbc9c9e8",
+      fontFamily: "system-ui",
+      fontSize: "20px",
+    },
+    buttonActionesSecondTable: {
+      fontFamily: "system-ui",
+      fontSize: "20px",
+    },
   });
   const [open, setOpen] = React.useState(false);
 
@@ -118,15 +137,15 @@ const RecordList = (props) => {
         <Table className={classes.root}>
           <TableHead>
             <TableRow>
-              <TableCell>Concepto</TableCell>
-              <TableCell>Monto</TableCell>
-              <TableCell>Fecha</TableCell>
-              <TableCell>Tipo</TableCell>
+              <TableCell className={classes.titleCell}>Concepto</TableCell>
+              <TableCell className={classes.titleCell}>Monto</TableCell>
+              <TableCell className={classes.titleCell}>Fecha</TableCell>
+              <TableCell className={classes.titleCell}>Tipo</TableCell>
 
               {props.propsBooleano ? (
                 <>
-                  <TableCell>Eliminar </TableCell>
-                  <TableCell> Editar </TableCell>
+                  <TableCell className={classes.buttonActionesSecondTable}>Eliminar </TableCell>
+                  <TableCell className={classes.buttonActionesSecondTable}> Editar </TableCell>
                 </>
               ) : undefined}
             </TableRow>
@@ -145,7 +164,7 @@ const RecordList = (props) => {
                 {props.propsBooleano ? (
                   <>
                     <TableCell>
-                      <Button
+                      <Button className={classes.buttonActionsStyle}
                         onClick={() => {
                           props.deleteOperation(item);
                           deleteConsult(item);
@@ -155,7 +174,7 @@ const RecordList = (props) => {
                       </Button>
                     </TableCell>
                     <TableCell>
-                      <Button
+                      <Button className={classes.buttonActionsStyle}
                         onClick={() => {
                           handleClickOpen(item);
                         }}
@@ -178,12 +197,12 @@ const RecordList = (props) => {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle>
-            <Typography>Edit yours operations here </Typography>
+          <DialogTitle className={classes.styleDialogTitle}>
+            <Typography>Edita tus operaciones aqui </Typography>
           </DialogTitle>
 
           <DialogContent>
-            <DialogContentText>
+            <DialogContentText className={classes.styleContentText}>
               <Input
                 defaultValue={itemConcept}
                 onChange={onChangeHandler}
@@ -210,15 +229,15 @@ const RecordList = (props) => {
           </DialogContent>
 
           <DialogActions>
-            <Button
+            <Button className={classes.buttonActionsStyle}
               onClick={() => {
                 handleClose();
               }}
               color="primary"
             >
-              Disagree
+              Cancelar
             </Button>
-            <Button
+            <Button className={classes.buttonActionsStyle}
               onClick={() => {
                 handleClose();
                 handleClickSave();
@@ -226,7 +245,7 @@ const RecordList = (props) => {
               color="primary"
               autoFocus
             >
-              Agree
+              Aceptar
             </Button>
           </DialogActions>
         </Dialog>
