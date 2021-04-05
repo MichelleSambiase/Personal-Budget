@@ -6,7 +6,6 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  TextField,
   Button,
   Dialog,
   DialogActions,
@@ -50,17 +49,19 @@ const RecordList = (props) => {
       justifyContent: "center",
     },
     buttonActionsStyle: {
-      color: "#fbc9c9e8",
+      color: "#ad8282",
     },
     titleCell: {
-      color: "#fbc9c9e8",
+      color: "#ad8282",
       fontFamily: "system-ui",
       fontSize: "20px",
     },
     buttonActionesSecondTable: {
       fontFamily: "system-ui",
       fontSize: "20px",
+      color: "#ad8282",
     },
+    
   });
   const [open, setOpen] = React.useState(false);
 
