@@ -21,7 +21,6 @@ const Home = (props) => {
       paddingTop: 30,
     },
     root: {
-      display: "flex",
       justifyContent: "center",
       alignItems: "center",
       flexDirection: "row",
@@ -30,6 +29,16 @@ const Home = (props) => {
     title: {
       display: "flex",
       justifyContent: "center",
+    },
+    gridItemStyleBalance: {
+      display: "flex",
+      fontSize: "15px",
+      justifyContent: "space-between",
+      color: "#848484",
+    },
+    titleStyle: {
+      fontFamily: "system-ui",
+      color: "#ad8282",
     },
   });
 
@@ -51,13 +60,17 @@ const Home = (props) => {
                   </Button>
                 </Tooltip>
               </Grid>
-              <Grid item>
+              <Grid item className={classes.gridItemStyleBalance}>
                 <Tooltip disableHoverListener title="Add">
-                  <Button>
-                    <h3>Ingresos: ${props.propIngreso}</h3>
-                    <h3>Egresos: ${props.propEgreso}</h3>
-                    <h3>Total: ${props.propMontoTotal}</h3>
-                  </Button>
+                <p className={classes.colorNumer}>
+                  Ingresos: ${props.propIngreso}
+                </p>{" "}
+                <p className={classes.colorNumer}>
+                  Egresos: ${props.propEgreso}
+                </p>
+                <p className={classes.colorNumer}>
+                  Total: ${props.propMontoTotal}
+                </p>        
                 </Tooltip>
               </Grid>
             </CardContent>

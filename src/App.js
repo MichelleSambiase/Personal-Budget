@@ -38,6 +38,10 @@ function App() {
     buttonForm: {
       width: "100%",
     },
+    buttonActionsStyle: {
+      color: "#ad8282",
+      border: "1px solid rgb(235 235 235)",
+    },
   });
   const [open, setOpen] = React.useState(false);
   const [list, setList] = useState([]);
@@ -121,7 +125,7 @@ function App() {
         propList={list}
       />
       <Container className={classes.button}>
-        <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        <Button  className={classes.buttonActionsStyle} variant="outlined" color="primary" onClick={handleClickOpen}>
           Agregar
         </Button>
       </Container>
@@ -173,7 +177,7 @@ function App() {
                 type="submit"
                 onClick={() => addConsult()}
               >
-                Confirm
+                Confirmar
               </Button>
             </form>
           </DialogContent>
