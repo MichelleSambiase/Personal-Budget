@@ -41,7 +41,6 @@ function App() {
     buttonActionsStyle: {
       color: "#ad8282",
       border: "1px solid rgb(235 235 235)",
-      
     },
   });
   const [open, setOpen] = React.useState(false);

@@ -51,7 +51,7 @@ const Home = (props) => {
           <Card className={classes.root}>
             <CardContent>
               <Grid className={classes.title} item>
-                <Tooltip disableHoverListener>
+                <Tooltip disableHoverListener title="balance">
                   <Button>
                     {" "}
                     <Typography variant="h4" component="h2">
@@ -62,6 +62,7 @@ const Home = (props) => {
               </Grid>
               <Grid item className={classes.gridItemStyleBalance}>
                 <Tooltip disableHoverListener title="Add">
+                  <span>
                 <p className={classes.colorNumer}>
                   Ingresos: ${props.propIngreso}
                 </p>{" "}
@@ -70,7 +71,8 @@ const Home = (props) => {
                 </p>
                 <p className={classes.colorNumer}>
                   Total: ${props.propMontoTotal}
-                </p>        
+                </p>   
+                </span>     
                 </Tooltip>
               </Grid>
             </CardContent>
